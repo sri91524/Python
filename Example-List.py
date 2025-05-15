@@ -197,42 +197,42 @@ print(largest)
 
 #####
 # largest number with slice
-# my_list = [17, 3, 11, 5, 1, 9, 7, 15, 13]
-# largest = my_list[0]
+my_list = [17, 3, 11, 5, 1, 9, 7, 15, 13]
+largest = my_list[0]
 
-# for i in my_list[1:]:
-#     if i > largest:
-#         largest = i
+for i in my_list[1:]:
+    if i > largest:
+        largest = i
 
-# print(largest)
+print(largest)
 
-# let's find the location of a given element inside a list:
-# my_list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-# to_find = 10
-# found = False
-# for i in my_list:
-#     found = i == to_find
-#     if found:
-#         break
-# if found:
-#     print("Found the number in index ", i)
-# else:
-#     print("Number not found")
+let's find the location of a given element inside a list:
+my_list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+to_find = 10
+found = False
+for i in my_list:
+    found = i == to_find
+    if found:
+        break
+if found:
+    print("Found the number in index ", i)
+else:
+    print("Number not found")
 
 
-# you've chosen the following numbers in the lottery: 3, 7, 11, 42, 34, 49.
-# The numbers that have been drawn are: 5, 11, 9, 42, 3, 49.
-# num_list = []
-# drawn = [5, 11, 9, 42, 3, 49]
-# bets = [3, 7, 11, 42, 34, 49]
-# hits = 0
-# for number in bets:
-#     if number in drawn:
-#         num_list.append(number)
-#         hits += 1
+you've chosen the following numbers in the lottery: 3, 7, 11, 42, 34, 49.
+The numbers that have been drawn are: 5, 11, 9, 42, 3, 49.
+num_list = []
+drawn = [5, 11, 9, 42, 3, 49]
+bets = [3, 7, 11, 42, 34, 49]
+hits = 0
+for number in bets:
+    if number in drawn:
+        num_list.append(number)
+        hits += 1
 
-# print(num_list)
-# print(hits)
+print(num_list)
+print(hits)
 
 """
  Program which removes all the number repetitions from the list. The goal is to have a list in which all the numbers appear not more than once.
@@ -249,11 +249,4 @@ for i in range(num):
 my_list = set(my_list)
 print(my_list)
 
-list_1 = ["A", "B", "C"]
-list_2 = list_1
-list_3 = list_2
- 
-del list_1[0]
-del list_2
- 
-print(list_3)
+
