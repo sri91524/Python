@@ -220,8 +220,8 @@ else:
     print("Number not found")
 
 
-you've chosen the following numbers in the lottery: 3, 7, 11, 42, 34, 49.
-The numbers that have been drawn are: 5, 11, 9, 42, 3, 49.
+# you've chosen the following numbers in the lottery: 3, 7, 11, 42, 34, 49.
+# The numbers that have been drawn are: 5, 11, 9, 42, 3, 49.
 num_list = []
 drawn = [5, 11, 9, 42, 3, 49]
 bets = [3, 7, 11, 42, 34, 49]
