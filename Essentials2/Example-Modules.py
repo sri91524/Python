@@ -104,3 +104,20 @@ my_list = [1, 2, 3, 4, 5, 6, 7, 8, 9 , 10]
 print(choice(my_list))
 print(sample(my_list, 5))
 print(sample(my_list, 10))
+
+####################################################
+# to import a module, add to path abolute or relative path of module and import and access it
+
+from sys import path
+
+path.append("C:\\Users\\hari_\\OneDrive\\Desktop\\Learning\\Python-Projects\\Essentials2\\Test")
+print(path)
+import module
+
+import os
+print(os.listdir("C:\\Users\\hari_\\OneDrive\\Desktop\\Learning\\Python-Projects\\Essentials2\\Test"))
+ 
+zeroes = [0 for i in range(5)]
+ones = [1 for i in range(5)]
+print(module.sum1(zeroes))
+print(module.prod1(ones))
