@@ -15,3 +15,4 @@ while run:
         or event.type == pygame.MOUSEBUTTONUP\
         or event.type == pygame.KEYUP:
             run = False
+
