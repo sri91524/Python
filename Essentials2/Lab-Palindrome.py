@@ -22,6 +22,19 @@ else:
             break
 
     if is_Palindrome:
-        print(text, " is a Palidrome")
+        print(text, " is a Palindrome")
     else:
         print(text, " is not a Palindrome")
+
+######################################
+# Method 2:
+text = input("Enter text: ")
+
+# Remove all spaces...
+text = text.replace(' ','')
+
+# ... and check if the word is equal to reversed itself
+if text and text.upper() == text[::-1].upper():
+	print("It's a palindrome")
+else:
+	print("It's not a palindrome")
