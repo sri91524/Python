@@ -108,3 +108,133 @@ class Sub(Super):
 
 obj = Super("Andy")
 print(obj)
+
+################################################################
+"""
+Class variables
+"""
+class Super:
+    supVar = 1
+
+class Sub(Super):
+    subVar = 2
+
+obj = Sub()
+print(obj.subVar)
+print(obj.supVar)
+#########################################
+"""
+Instance Variable
+"""
+class Super:
+    def __init__(self):
+        self.supVar = 11
+
+class Sub(Super):
+    def __init__(self):
+        super().__init__()
+        self.subVar = 12
+
+obj = Sub()
+print(obj.subVar)
+print(obj.supVar)
+##########################################3
+"""
+3 level inheritance
+"""    
+class Level1:
+    vaiable_1 = 100
+    def __init__(self):
+        self.var_1 = 101
+    
+    def fun_1(self):
+        return 102
+
+class Level2(Level1):
+    variable_2 = 200
+    def __init__(self):
+        super().__init__()
+        self.var_2 = 201
+
+    def fun_2(self):
+        return 202
+    
+class Level3(Level2):
+    variable_3 = 300
+    def __init__(self):
+        super().__init__()
+        self.var_3 = 301
+
+    def fun_3(self):
+        return 302
+
+obj = Level3()
+print(obj.vaiable_1, obj.var_1, obj.fun_1())
+print(obj.variable_2, obj.var_2, obj.fun_2())
+print(obj.variable_3, obj.var_3, obj.fun_3())
+##############################################
+"""
+Multiple Inheritance
+"""
+class SuperA:
+    var_a = 10
+    def fun_a(self):
+        return 11
+    
+class SuperB:
+    var_b = 20
+    def fun_b(self):
+        return 21
+    
+class Sub(SuperA, SuperB):
+    pass
+
+obj = Sub()
+print(obj.var_a, obj.fun_a())
+print(obj.var_b, obj.fun_b())
+#######################################
+"""
+Overriding
+"""
+class Level1:
+    var = 100
+    def fun(self):
+        return 101
+
+class Level2(Level1):
+    var = 200
+    def fun(self):
+        return 201
+
+class Level3(Level2):
+    pass
+
+obj = Level3()
+print(obj.var, obj.fun())
+####################################
+"""
+Python looks for object components in the following order:
+
+inside the object itself;
+in its superclasses, from bottom to top;
+if there is more than one class on a particular inheritance path, Python scans them from left to right.
+"""
+class Left:
+    var = "L"
+    var_left = "LL"
+    def fun(self):
+        return "Left"
+
+class Right:
+    var = "R"
+    var_right ="RR"
+    def fun(self):
+        return "Right"
+
+# class Sub(Left, Right):
+#     pass
+class Sub(Right, Left):
+    pass
+
+obj = Sub()
+print(obj.var, obj.var_left, obj.var_right, obj.fun())
