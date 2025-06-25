@@ -122,13 +122,3 @@ for v in (1 if x % 2 == 0 else 0 for x in range(10)):
 print()
 print("_____________________________")
 ##############################################
-"""
-A lambda function is a function without a name (you can also call it an anonymous function)
-"""
-two = lambda:2
-sqr = lambda x: x*x
-pwr = lambda x, y: x ** y
-
-for a in range(-2, 3):
-    print(sqr(a), end =" ")
-    print(pwr(a, two()))
